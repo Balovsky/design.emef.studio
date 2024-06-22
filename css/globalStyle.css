@@ -201,12 +201,12 @@ a {
 
 .first_section{
     width: 100%;
-    height: 100%;
+    height: 70vh;
     display: flex;
 }
 .left_side{
     width: 70%;
-    height: calc( 100% - 150px);
+    /* height: calc( 100% - 150px); */
     background: #4730D3;
     display: flex;
     justify-content: center;
@@ -222,7 +222,7 @@ a {
 }
 .right_side{
     width: 28%;
-    height: calc( 100% - 150px);
+    /* height: calc( 100% - 150px); */
     background: #CCF381;
     flex: 1;
     position: relative;
@@ -230,7 +230,17 @@ a {
 
 .second_section{
     width: 100%;
+    height: 2400px;
+    background: url(../assets/homePage/test.jpg);
+    border: 2px solid blue;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+}
+.third_section{
+    width: 100%;
     height: 4000px;
+    border: 2px solid red;
 }
 .imageHeaderContainer{
     min-width: 100%;
@@ -244,6 +254,95 @@ a {
     width: 60%;
     /* height: 100%; */
     object-fit: fill;
+}
+.servicesContainer{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    /* background: red; */
+}
+.leftServicesSide{
+    width: 50%;
+    height: 100%;
+    color: #4831D4;
+    /* background: red; */
+    /* border: 2px solid red; */
+}
+.rightServicesSite{
+    margin-top: 40px;
+    /* display: flex; */
+    flex: 1;
+    /* border: 2px solid yellow; */
+    /* background: blue; */
+}
+.leftServicesSide, .rightServicesSite{
+    
+    display: flex;
+    flex-direction: column; /* Ustawiamy elementy w kolumnie */
+    justify-content: space-around;
+    /* align-items: space; */
+}
+.rightServicesSite{
+    align-items:  end;
+}
+.serviceTxt, .serviceImg{
+    flex: 1; /* Ustawia każdy element na równą wysokość */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    /* background: blue; */
+    /* opacity: 0.3; */
+}
+.leftServicesSide .serviceTxt:nth-child(even){
+    width: 120%;
+    
+    /* background: pink; */
+}
+
+.rightServicesSite .serviceTxt:nth-child(odd){
+    width: 100%;
+    /* background: pink; */
+}
+.rightServicesSite .serviceImg:nth-child(even){
+    width: 100%;
+    /* background: red; */
+    /* background: pink; */
+}
+.leftServicesSide .title{
+    margin-top: 40px;
+    font-size: 48px;
+    font-weight: 700;
+}
+.serviceTxt:first-child{
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.serviceTitle{
+    font-size: 28px;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+.servideDesc{
+    font-size: 24px;
+}
+
+.serviceImg img{
+    width: 100%;
+}
+.rightServicesSite .serviceImg{
+    max-width: 400px;
+    /* height: 200px; */
+    /* background: red; */
+    object-fit: contain;
+}
+.leftServicesSide .serviceImg{
+    max-width: 400px;
+    /* height: 200px; */
+    /* background: blue; */
+    object-fit: contain;
 }
 
 /* ###############TABLET################## */
@@ -266,6 +365,33 @@ a {
 }
 .logoName{
     font-size: 28px;
+}
+.servicesContainer{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    /* background: red; */
+}
+.rightServicesSite .serviceImg{
+    max-width: 300px;
+    /* height: 200px; */
+    /* background: red; */
+    object-fit: contain;
+}
+.leftServicesSide .serviceImg{
+    max-width: 300px;
+    /* height: 200px; */
+    /* background: blue; */
+    object-fit: contain;
+}
+.serviceTitle{
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+.servideDesc{
+    font-size: 20px;
 }
 }
 
@@ -295,5 +421,39 @@ a {
     }
     .logoName{
         font-size: 28px;
+    }
+    .second_section{
+        height: auto;
+    }
+    .servicesContainer{
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        /* background: red; */
+    }
+    .leftServicesSide, .rightServicesSite{
+        width: 100%;
+        display: flex;
+        flex-direction: column; /* Ustawiamy elementy w kolumnie */
+        justify-content: space-around;
+        margin: 0;
+        /* align-items: space; */
+    }
+    .serviceTxt:first-child{
+        height: 200px;
+    }
+    .leftServicesSide .serviceTxt:nth-child(even){
+        width: 100%;
+    }
+    .serviceImg{
+        display: none;
+    }
+    .serviceTitle{
+        margin-top: 25px;
+    }
+    .leftServicesSide .title{
+        font-size: 34px;
     }
 }
