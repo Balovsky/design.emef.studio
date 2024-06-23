@@ -6,8 +6,10 @@
     font-family: 'Lato', sans-serif;
     /* overflow: hidden; */
 }
+
 body::-webkit-scrollbar {
     display: none;
+    /* overflow: auto; */
     
 }
 a {
@@ -21,6 +23,54 @@ a {
     outline: none; /* Usunięcie obramowania focus */
     cursor: pointer; /* Ustawienie kursora na rękę */
 }
+/* Globalny reset dla przycisków */
+button {
+    all: unset; /* Resetuje wszystkie style do wartości domyślnych */
+    display: inline-block; /* Przywraca inline-block, aby umożliwić ustawienie szerokości i wysokości */
+    margin: 0; /* Usuwa wszelkie marginesy */
+    padding: 0; /* Usuwa wszelkie wypełnienia */
+    border: none; /* Usuwa obramowanie */
+    background: none; /* Usuwa tło */
+    box-shadow: none; /* Usuwa wszelkie cienie */
+    color: inherit; /* Dziedziczy kolor tekstu od rodzica */
+    font: inherit; /* Dziedziczy wszystkie właściwości czcionki od rodzica */
+    text-align: inherit; /* Dziedziczy wyrównanie tekstu */
+    line-height: normal; /* Ustawia normalną wysokość linii */
+    vertical-align: middle; /* Wyrównuje elementy wewnątrz w środku */
+    appearance: none; /* Usuwa domyślny wygląd specyficzny dla systemu */
+    cursor: pointer; /* Ustawia kursor na wskaźnik */
+    user-select: none; /* Wyłącza zaznaczanie tekstu */
+    -webkit-tap-highlight-color: transparent; /* Usuwa podświetlenie przy kliknięciu na urządzeniach dotykowych */
+    outline: none; /* Usuwa obramowanie przy kliknięciu */
+}
+input, textarea, select, button {
+
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+
+}
+
+/* Dodatkowe resety dla bardziej specyficznych przypadków */
+button:focus {
+    outline: none; /* Usuwa obramowanie przy focusie */
+}
+
+button:active {
+    transform: none; /* Resetuje wszelkie transformacje */
+    box-shadow: none; /* Resetuje cienie przy aktywacji */
+}
+
+button::-moz-focus-inner {
+    border: 0; /* Usuwa obramowanie wewnętrzne w Firefox */
+    padding: 0; /* Usuwa wypełnienie wewnętrzne w Firefox */
+}
+
 .hamburgerPage{
     width: 100vw;
     margin-top: 150px;
@@ -232,15 +282,23 @@ a {
     width: 100%;
     height: 2400px;
     background: url(../assets/homePage/test.jpg);
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     background-position: center;
     background-repeat: no-repeat;
+    /* background-attachment: fixed; */
     /* background-size: contain; */
 }
-.third_section{
+.four_section{
     width: 100%;
-    height: 4000px;
-    border: 2px solid red;
+    /* height: 4000px; */
+    background: #F9F9F9;
+}
+.fourContainer{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .imageHeaderContainer{
     min-width: 100%;
@@ -344,6 +402,350 @@ a {
     /* background: blue; */
     object-fit: contain;
 }
+.third_section{
+    width: 100%;
+    margin: 0 auto;
+    background: #4730D3;
+    padding: 40px 0px 80px 0px;
+}
+.thirdComtainer{
+    width: 80%;
+    margin: 0 auto;
+}
+.sectionTitle{
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    
+}
+.sliderContainer{
+    /* height: 500px;
+    width: 100%; */
+    background: #4730D3;
+    /* border: 2px solid red; */
+    
+}
+.buttonContainer{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.toSubpage{
+    font-size: 24px;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.sliderContainer {
+    position: relative;
+    width: 100%;
+    /* height: 100%; */
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    flex: 1;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.carousel-item {
+    width: 100%;
+    height: 500px;
+    flex: 1 0 calc(100% / 3); /* 3 elementy na raz */
+    margin: 0 5px; /* Odstęp między elementami */
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 5px;
+    /* border: 2px solid white; */
+    position: relative;
+    /* height: 100%; */
+    overflow: hidden;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Skaluje obrazek, aby wypełniał kontener */
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+.fourContainer .title{
+    color: #4730D3;
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    /* background: red; */
+}
+.fourContainer .desc{
+    font-size: 20px;
+    margin-top: 20px;
+    color: #876F9B;
+    text-align: center;
+    line-height: 20px;
+}
+.emailContainer{
+    width: 60%;
+    /* height: 600px; */
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+.designEmail{
+    width: 100%;
+    /* background: red; */
+}
+.textArea{
+    width: 100%;
+}
+.inputContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    /* border: 2px solid red; */
+}
+.nameIptTitle{
+    font-size: 14px;
+    color: #B9ADBD;
+    margin-bottom: 20px;
+}
+.leftEmailContainer{
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+}
+.rightEmailContainer{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    /* flex: 1; */
+    /* margin-left: 10%; */
+}
+input, textarea{
+    border-bottom: 2px solid #B9ADBD;
+    padding-bottom: 10px;
+}
+.btnContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.sendMess{
+    margin-top: 100px;
+    width: 300px;
+    height: 50px;
+    border: 2px solid #5846ce;
+    color: #4730D3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 50px;
+
+}
+.arrow{
+
+    margin-left: 20px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.sendMess:hover .arrow{
+    transform:translateX(50px);
+}
+.stopka{
+    width: 100%;
+    /* height: 500px; */
+    background: #4730D3;
+    display: flex;
+    flex-direction: column;
+}
+
+.rightReservet{
+    width: 80%;
+    margin: 0 auto;
+    color:  white;
+    padding: 10px 0;
+    text-align: center;
+    /* margin: 20px 0px; */
+}
+.footerMenuContainer{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+.leftFooter{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    /* background: red; */
+    flex: 1;
+}
+.logoFooter{
+    /* width: 500px; */
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 50px 0px 30px 0px;
+    /* background: blue; */
+}
+.logoFooter img{
+    width: 12%;
+}
+.logoNameFooter{
+    /* margin-top: 15px; */
+    font-size: 40px;
+    color: white;
+    letter-spacing: 2px;
+}
+.centerFooter{
+    width: 300px;
+    /* background: pink; */
+    flex: 0.5;
+    color: white;
+    font-size: 20px;
+    /* justify-content: center; */
+}
+.rightFooter{
+    width: 300px;
+    /* background: yellow; */
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+.left{
+    flex: 1;
+    height: 100%;
+    /* background: red; */
+}
+.right{
+    flex: 0.8;
+    /* background: pink; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.right a{
+    padding: 3px 0;
+    margin: 3px 0;
+    color: white;
+    font-size: 20px;
+    position: relative
+}
+.right a::before{
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background: white;
+    transition: all 0.3s ease;
+}
+.right a:hover::before{
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 2px;
+    position: absolute;
+    background: white;
+}
+.footerAdress{
+    color: white;
+    font-size: 20px;
+    padding: 3px 0px;
+}
+.footerAbox{
+    display: flex;
+    justify-content: center;
+}
+.footerAbox a{
+    padding: 3px 0;
+    margin: 8px 0;
+    position: relative;
+    z-index: 999;
+}
+.footerAbox a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: white;
+    width: 0%;
+    height: 2px;
+    z-index: 997;
+    transition: all 0.3s ease;
+    /* border-bottom: 2px solid white; */
+}
+.footerAbox a:hover::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: white;
+    width: 30%;
+    height: 2px;
+    z-index: 997;
+    transition: all 0.3s ease;
+    /* border-bottom: 2px solid white; */
+}
+
+.footerAbox{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 200px;
+    height: 100%;
+    /* background: red; */
+    margin: 0 auto;
+}
+.footerUp img{
+    width: 25px;
+}
+
+
 
 /* ###############TABLET################## */
 @media (max-width: 1366px) {
@@ -392,6 +794,13 @@ a {
 }
 .servideDesc{
     font-size: 20px;
+}
+.fourContainer{
+    width: 80%;
+
+}
+.emailContainer{
+    width: 100%;
 }
 }
 
@@ -455,5 +864,43 @@ a {
     }
     .leftServicesSide .title{
         font-size: 34px;
+    }
+    .carousel-item {
+        flex: 1 0 100%; /* 1 element na raz na mniejszych ekranach */
+        margin: 0;
+    }
+    .carousel-track {
+        transform: translateX(0); /* Resetowanie transformacji */
+    }
+    .sliderContainer {
+        padding: 10px; /* Mniejsze wcięcia */
+    }
+    .inputContainer{
+        flex-direction: column;
+    }
+    .leftEmailContainer, .rightEmailContainer {
+        width: 100%;
+    }
+    .emailContainer{
+        margin-top: 50px;
+    }
+    .sendMess{
+        margin-top: 50px;
+    }
+    .centerFooter{
+        display: none;
+    }
+}
+
+
+
+
+
+@media (max-width: 480px) {
+    .carousel-item {
+        flex: 1 0 100%; /* 1 element na raz na bardzo małych ekranach */
+    }
+    .carousel-track {
+        transform: translateX(0); /* Resetowanie transformacji */
     }
 }

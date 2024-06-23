@@ -9,25 +9,16 @@
     <title>Design | eMeF</title>
 </head>
 <body class="scrollable-element">
-    <!-- <div class="hamburgerPage">
-        <div class="home">home</div>
-        <div class="home">home</div>
-        <div class="home">home</div>
-        <div class="home">home</div>
-        <div class="home">home</div>
-        <div class="home">home</div>
-        <div class="home">home</div>
-    </div> -->
     <div id="container">
         <div class="hamburgerPage">
-            <a class="pageActive" href="./index.html">strona główna</a>
-            <a href="http://">usługi</a>
-            <a href="http://">portfolio</a>
-            <a href="http://">case studies</a>
-            <a href="http://">blog</a>
-            <a href="http://">faq</a>
-            <a href="http://">kontakt</a>
-            <a href="http://">o nas</a>
+            <a class="menuBtn" class="pageActive" href="./index.html">strona główna</a>
+            <a class="menuBtn"class="menuBtn" href="./subpages/services.html">usługi</a>
+            <a class="menuBtn" href="./subpages/gallery.html">portfolio</a>
+            <a class="menuBtn" href="./subpages/caseStudies.html">case studies</a>
+            <a class="menuBtn" href="./subpages/blog.html">blog</a>
+            <a class="menuBtn" href="./subpages/about.html#faq">faq</a>
+            <a class="menuBtn" href="#contactMe">kontakt</a>
+            <a class="menuBtn" href="./subpages/about.html">o nas</a>
         </div>
         <nav class="navigation">
             <div class="leftNav">
@@ -52,7 +43,7 @@
                 </div>
             </div>
         </div>
-        <div class="second_section">
+        <div class="second_section" id="services">
             <div class="servicesContainer">
                 <div class="leftServicesSide">
                     <div class="serviceTxt title">usługi</div>
@@ -78,7 +69,107 @@
             
             </div>
         </div>
-        <div class="third_section"></div>
+        <div class="third_section" id="portfolio">
+            <div class="thirdComtainer">
+                <div class="sectionTitle">portfolio</div>
+                <div class="sliderContainer">
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-item">
+                                <img src="./assets/homePage/popier.png" alt="">
+                            </div>
+                                <div class="carousel-item"><img src="./assets/homePage/wizyt.png" alt=""></div>
+                                <div class="carousel-item"><img src="./assets/homePage/przydladowe zastosowanie logo 5.png" alt=""></div>
+                                <div class="carousel-item"><img src="./assets/homePage/przydladowe zastosowanie logo 2.png" alt=""></div>
+                                <div class="carousel-item"><img src="./assets/homePage/przydladowe zastosowanie logo 4.png" alt=""></div>
+                                <div class="carousel-item"><img src="./assets/homePage/przydladowe zastosowanie logo 6.png" alt=""></div>
+                                <div class="carousel-item"><img src="./assets/homePage/przydladowe zastosowanie logo 7.png" alt=""></div>
+                                <div class="carousel-item"><img src="./assets/homePage/hoodie.png" alt=""></div>
+                            <!-- Dodaj więcej realizacji według potrzeby -->
+                        </div>
+                    </div>
+                    <div class="carousel-dots">
+                        <span class="dot" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                        <span class="dot" data-index="4"></span>
+                        <span class="dot" data-index="5"></span>
+                        <span class="dot" data-index="6"></span>
+                        <span class="dot" data-index="7"></span>
+                        <!-- Dodaj więcej kropek według liczby realizacji -->
+                    </div>
+                </div>
+                <div class="buttonContainer">
+                    <button class="toSubpage"><a href="./subpages/gallery.html">zobacz całe portfolio</a></button>
+                </div>
+                
+            </div>
+        </div>
+        <div id="contactMe" class="four_section" >
+           <div class="fourContainer">
+            <div class="title">skontaktuj się ze mną</div>
+            <div class="desc">Masz pytanie, propozycję, czy po prostu chcesz <br>się przywitać?  Śmiało, napisz!</div>
+            <div class="emailContainer">
+                <form name="contact" data-netlify="true" method="post" class="designEmail">
+                    <div class="inputContainer">
+                        <div class="leftEmailContainer">
+                            <div class="nameIptTitle" >Twoje imię i nazwisko</div>
+                            <input class="ipt" type="text" placeholder="wpisz swoje imię i nazwisko" required>
+                        </div>
+                        <div class="rightEmailContainer">
+                            <div class="nameIptTitle">twój mail</div>
+                            <input type="email" name="" id="" class="" placeholder="wpisz swój adres email" required>
+                        </div>
+                    </div>
+                    <div class="nameIptTitle" >Twoja wiadomość</div>
+                    <textarea class="textArea" rows="2" id="" placeholder="wpisz swoją wiadomość" required></textarea>
+                    <div class="btnContainer">
+                        <button class="sendMess">Wyślij <img class="arrow" src="./assets/homePage/icons8-arrow-50.png" alt=""></button>
+                    </div>
+                </form>
+                
+            </div>
+            
+           </div>
+           <footer class="stopka">
+            <div class="footerMenuContainer">
+                <div class="leftFooter">
+                    <div class="logoFooter">
+                        <img src="./assets/homePage/emef short.png" alt="">
+                        <span class="logoNameFooter">eMeF <br>Studio</span>
+                    </div> 
+                    <span class="footerAdress">Mariusz Franik</span>
+                    <span class="footerAdress">+48 111 222 333</span>
+                    <span class="footerAdress">info@emef.studio</span>
+                    
+                </div>
+                <div class="centerFooter">
+                    <div class="footerAbox">
+                        <a class="footerUp" href="#container" target="" rel="noopener noreferrer"><img src="./assets/homePage/icons8-arrow-up-50.png" alt="">Strona główna</a>
+                        <a class="footerUp" href="#services" target="" rel="noopener noreferrer"><img src="./assets/homePage/icons8-arrow-up-50.png" alt="">Usługi</a>
+                        <a class="footerUp" href="#portfolio" target="" rel="noopener noreferrer"><img src="./assets/homePage/icons8-arrow-up-50.png" alt="">Portfolio</a>
+                        <a class="footerUp" href="#contactMe" target="" rel="noopener noreferrer"><img src="./assets/homePage/icons8-arrow-up-50.png" alt="">Kontakt</a>
+                    </div> 
+                    
+                </div>
+                <div class="rightFooter">
+                   <div class="left">
+                    
+                   </div>
+                   <div class="right">
+                    <a href="./subpages/services.html">Usługi</a>
+                    <a href="./subpages/gallery.html">Portfolio</a>
+                    <a href="./subpages/caseStudies.html">Case studies</a>
+                    <a href="./subpages/blog.html">Blog</a>
+                    <a href="./subpages/about.html">O mnie</a>
+                   </div>
+                </div>
+            </div>
+            <div class="rightReservet">© Copyright 2024, Mariusz Franik. All Rights Reserved</div>
+           </footer>
+        </div>
+
     </div>
 
 
