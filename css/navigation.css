@@ -1,0 +1,500 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
+    /* overflow: hidden; */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* overflow: auto; */
+    
+}
+.upArrow{
+    width: 64px;
+    height: 64px;
+    background-image: url(../assets/homePage/up-arrow.png);
+    background-position: center;
+    position: fixed;
+    bottom: 150px;
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+    /* display: none; */
+    opacity: 0; /* Ustawiamy początkową przezroczystość */
+    transform: scale(0); /* Ustawiamy początkową skalę */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.upArrow.show {
+    /* display: block; */
+    opacity: 1; /* Ustawiamy przezroczystość na 1 */
+    transform: scale(1); /* Przywracamy normalną skalę */ /* Pokazujemy przycisk gdy jest klasa 'show' */
+}
+
+a {
+    color: inherit; /* Dziedziczenie koloru tekstu od rodzica */
+    text-decoration: none; /* Usunięcie podkreślenia */
+    background: none; /* Usunięcie tła */
+    border: none; /* Usunięcie ramki */
+    margin: 0; /* Usunięcie marginesów */
+    padding: 0; /* Usunięcie odstępów wewnętrznych */
+    font: inherit; /* Dziedziczenie stylów czcionki */
+    outline: none; /* Usunięcie obramowania focus */
+    cursor: pointer; /* Ustawienie kursora na rękę */
+}
+/* Globalny reset dla przycisków */
+button {
+    all: unset; /* Resetuje wszystkie style do wartości domyślnych */
+    display: inline-block; /* Przywraca inline-block, aby umożliwić ustawienie szerokości i wysokości */
+    margin: 0; /* Usuwa wszelkie marginesy */
+    padding: 0; /* Usuwa wszelkie wypełnienia */
+    border: none; /* Usuwa obramowanie */
+    background: none; /* Usuwa tło */
+    box-shadow: none; /* Usuwa wszelkie cienie */
+    color: inherit; /* Dziedziczy kolor tekstu od rodzica */
+    font: inherit; /* Dziedziczy wszystkie właściwości czcionki od rodzica */
+    text-align: inherit; /* Dziedziczy wyrównanie tekstu */
+    line-height: normal; /* Ustawia normalną wysokość linii */
+    vertical-align: middle; /* Wyrównuje elementy wewnątrz w środku */
+    appearance: none; /* Usuwa domyślny wygląd specyficzny dla systemu */
+    cursor: pointer; /* Ustawia kursor na wskaźnik */
+    user-select: none; /* Wyłącza zaznaczanie tekstu */
+    -webkit-tap-highlight-color: transparent; /* Usuwa podświetlenie przy kliknięciu na urządzeniach dotykowych */
+    outline: none; /* Usuwa obramowanie przy kliknięciu */
+}
+input, textarea, select, button {
+
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+
+}
+
+/* Dodatkowe resety dla bardziej specyficznych przypadków */
+button:focus {
+    outline: none; /* Usuwa obramowanie przy focusie */
+}
+
+button:active {
+    transform: none; /* Resetuje wszelkie transformacje */
+    box-shadow: none; /* Resetuje cienie przy aktywacji */
+}
+
+button::-moz-focus-inner {
+    border: 0; /* Usuwa obramowanie wewnętrzne w Firefox */
+    padding: 0; /* Usuwa wypełnienie wewnętrzne w Firefox */
+}
+.backToHome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hamburgerPage{
+    width: 100vw;
+    margin-top: 150px;
+    height: calc( 100vh - 150px );
+    background: #CCF381;;
+    /* z-index: ; */
+    position: fixed;
+    /* visibility: hidden; */
+    transform: translate(100%, -100%);
+    z-index: 999;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 4em 5em;
+    
+}
+.hambActive{
+    animation: slide-down 1s forwards, expand 0.5s 1s forwards;
+}
+.hamburgerPage a{
+    margin: 5px;
+    padding: 5px 10px;
+    color: #4730D3;
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.hamburgerPage a:hover{
+
+    color: #CCF381;
+
+}
+.hamburgerPage a::after{
+    content: '';
+    width: 0%;
+    height: 100%;
+    background: #4730D3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.hamburgerPage a:hover::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #4730D3;
+    position: absolute;
+    color: #CCF381;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* expand 0.5s 1s forwards; */
+@keyframes slide-down {
+    0% {
+        transform: translate(70%, -100%);
+    }
+    100% {
+        transform: translate(70%, 0%);
+    }
+}
+
+@keyframes expand {
+    0% {
+        transform: translate(70%, 0%);
+    }
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+
+
+#container{
+    width: 100vw;
+    height: 80vh;
+    /* background: red; */
+    /* display: flex; */
+}
+.navigation{
+    width: 100%;
+    height:150px;
+    /* background: yellow; */
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+}
+.leftNav{
+    width: 70%;
+    padding-left: 5%;
+    background: #4730D3;
+
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+.logo_container{
+    /* padding-top: 40px; */
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.logo_container img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+.logoName{
+    margin-top: 15px;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 2px;
+}
+.rightNav{
+    /* width: 28%; */
+    flex: 1;
+    padding-right: 5%;
+    background: #CCF381;
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: flex-end; */
+    align-items: center;
+    /* background: red; */
+    z-index: 999;
+}
+.pageName{
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #4730D3;
+}
+.hambMenu{
+    width: 60px;
+    height: 40px;
+    /* background: red; */
+    text-align: center;
+    /* border: 2px solid black; */
+}
+.hambMenu{
+    width: 80px;
+    height: 7px;
+    background: #4730D3;
+    border-radius: 25px;
+    position: relative;
+    transition: all 3s ease, transform 0.3s ease;
+}
+.hambMenu::before{
+    content: '';
+    width: 60%;
+    height: 100%;
+    position: absolute;   
+    top: 13px;
+    right: 0px;
+    background: #4730D3;
+    border-radius: 25px;
+    transition: all 3s ease, transform 0.3s ease;
+}
+.pageActive{
+    border-bottom: 2px solid ;
+}
+.hambMenu.hambAnimation::before{
+    content: '';
+    width: 60%;
+    height: 100%;
+    position: absolute;   
+    top: 13px;
+    right: 0px;
+    background: #4730D3;
+    border-radius: 25px;
+    transform-origin: bottom right;
+    transform: rotate(45deg);
+}
+
+.hambMenu.hambAnimation{
+    transform: translateX(50px);
+
+}
+
+.sectontest{
+    height: 4000px;
+}
+
+.stopka{
+    width: 100%;
+    /* height: 500px; */
+    background: #4730D3;
+    display: flex;
+    flex-direction: column;
+}
+
+.rightReservet{
+    width: 80%;
+    margin: 0 auto;
+    color:  white;
+    padding: 10px 0;
+    text-align: center;
+    /* margin: 20px 0px; */
+}
+.footerMenuContainer{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+.leftFooter{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    /* background: red; */
+    flex: 1;
+}
+.logoFooter{
+    /* width: 500px; */
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 50px 0px 30px 0px;
+    /* background: blue; */
+}
+.logoFooter img{
+    width: 12%;
+}
+.logoNameFooter{
+    /* margin-top: 15px; */
+    font-size: 40px;
+    color: white;
+    letter-spacing: 2px;
+}
+.centerFooter{
+    width: 300px;
+    /* background: pink; */
+    flex: 0.5;
+    color: white;
+    font-size: 20px;
+    /* justify-content: center; */
+}
+.rightFooter{
+    width: 300px;
+    /* background: yellow; */
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+.left{
+    flex: 1;
+    height: 100%;
+    /* background: red; */
+}
+.right{
+    flex: 0.8;
+    /* background: pink; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.right a{
+    padding: 3px 0;
+    margin: 3px 0;
+    color: white;
+    font-size: 20px;
+    position: relative
+}
+.right a::before{
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background: white;
+    transition: all 0.3s ease;
+}
+.right a:hover::before{
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 2px;
+    position: absolute;
+    background: white;
+}
+.footerAdress{
+    color: white;
+    font-size: 20px;
+    padding: 3px 0px;
+}
+.footerAbox{
+    display: flex;
+    justify-content: center;
+}
+.footerAbox a{
+    padding: 3px 0;
+    margin: 8px 0;
+    position: relative;
+    z-index: 999;
+}
+.footerAbox a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: white;
+    width: 0%;
+    height: 2px;
+    z-index: 997;
+    transition: all 0.3s ease;
+    /* border-bottom: 2px solid white; */
+}
+.footerAbox a:hover::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: white;
+    width: 30%;
+    height: 2px;
+    z-index: 997;
+    transition: all 0.3s ease;
+    /* border-bottom: 2px solid white; */
+}
+
+.footerAbox{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 200px;
+    height: 100%;
+    /* background: red; */
+    margin: 0 auto;
+}
+.footerUp img{
+    width: 25px;
+}
+
+
+
+
+@media (max-width: 1366px) {
+    .imageHeaderContainer{
+        width: 100%;
+        left: -50%;
+    }
+    .imageHeaderContainer img{
+        width: 80%;
+        /* height: 100%; */
+        object-fit: fill;
+    }
+    .hambMenu.hambAnimation{
+        transform: translateX(0px);
+    
+    }
+    .logo_container{
+        width: 100px;
+    }
+    .logoName{
+        font-size: 28px;
+    }
+
+    }
+    
+    /* *********** mobile view ********************************** */
+    @media (max-width: 768px) {
+        .rightNav{
+            justify-content: center;
+            padding: 0px;
+        }
+        .pageName{
+            display: none;
+            /* justify-content: center; */
+            padding: 0px;
+        }
+        .hamb_Menu{
+            padding: 0px;
+            /* justify-content: center; */
+        }
+    
+        .hambMenu.hambAnimation{
+            transform: translateX(0px);
+        
+        }
+        .logo_container{
+            width: 100px;
+        }
+        .logoName{
+            font-size: 28px;
+        }
+        
+        .centerFooter{
+            display: none;
+        }
+    }
+    
+    
+    
+    
+    

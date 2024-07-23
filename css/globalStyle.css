@@ -12,6 +12,27 @@ body::-webkit-scrollbar {
     /* overflow: auto; */
     
 }
+.upArrow{
+    width: 64px;
+    height: 64px;
+    background-image: url(../assets/homePage/up-arrow.png);
+    background-position: center;
+    position: fixed;
+    bottom: 150px;
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+    /* display: none; */
+    opacity: 0; /* Ustawiamy początkową przezroczystość */
+    transform: scale(0); /* Ustawiamy początkową skalę */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.upArrow.show {
+    /* display: block; */
+    opacity: 1; /* Ustawiamy przezroczystość na 1 */
+    transform: scale(1); /* Przywracamy normalną skalę */ /* Pokazujemy przycisk gdy jest klasa 'show' */
+}
+
 a {
     color: inherit; /* Dziedziczenie koloru tekstu od rodzica */
     text-decoration: none; /* Usunięcie podkreślenia */
@@ -70,7 +91,11 @@ button::-moz-focus-inner {
     border: 0; /* Usuwa obramowanie wewnętrzne w Firefox */
     padding: 0; /* Usuwa wypełnienie wewnętrzne w Firefox */
 }
-
+.backToHome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .hamburgerPage{
     width: 100vw;
     margin-top: 150px;
@@ -196,10 +221,17 @@ button::-moz-focus-inner {
     padding-right: 5%;
     background: #CCF381;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    /* justify-content: flex-end; */
     align-items: center;
-
+    /* background: red; */
     z-index: 999;
+}
+.pageName{
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #4730D3;
 }
 .hambMenu{
     width: 60px;
@@ -745,6 +777,11 @@ input, textarea{
     width: 25px;
 }
 
+.hamb_Menu{
+    padding: 10px 5px 20px 5px;
+    /* background: red; */
+    cursor: pointer;
+}
 
 
 /* ###############TABLET################## */
@@ -806,6 +843,19 @@ input, textarea{
 
 /* *********** mobile view ********************************** */
 @media (max-width: 768px) {
+    .rightNav{
+        justify-content: center;
+        padding: 0px;
+    }
+    .pageName{
+        display: none;
+        /* justify-content: center; */
+        padding: 0px;
+    }
+    .hamb_Menu{
+        padding: 0px;
+        /* justify-content: center; */
+    }
     .imageHeaderContainer{
         /* height: auto; */
         width: 100%;
