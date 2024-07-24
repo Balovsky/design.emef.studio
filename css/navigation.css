@@ -492,6 +492,9 @@ button::-moz-focus-inner {
         .centerFooter{
             display: none;
         }
+        .upArrow{
+            right: 0px;
+        }
     }
     
     

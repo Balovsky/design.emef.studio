@@ -1,11 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+    <title>Portfolio | eMeF</title>
 </head>
-<body>
-    <h1>portfolio</h1>
+<body >
+    <div class="upArrow show"></div>
+    <div id="container">
+        <div class="hamburgerPage">
+            <a class="menuBtn" href="../index.html">home</a>
+            <a class="menuBtn" href="./services.html">usługi</a>
+            <a class="menuBtn pageActive" href="./gallery.html">portfolio</a>
+            <a class="menuBtn" href="./caseStudies.html">case studies</a>
+            <a class="menuBtn" href="./blog.html">blog</a>
+            <a class="menuBtn " href="./about.html#faq">faq</a>
+            <a class="menuBtn " href="./about.html">o nas</a>
+            <a class="menuBtn" href="../index.html#contactMe">kontakt</a>
+            
+        </div>
+        <nav class="navigation">
+            <div class="leftNav">
+                <a class="backToHome" href="https://emef.studio/">
+                    <div class="logo_container">
+                        <img src="../assets/homePage/granat 2.png" alt="">
+                    </div>
+                    <span class="logoName">eMeF <br>Studio</span>
+                </a>
+            </div>
+            <div class="rightNav">
+                <div class="pageName menuBtn">portfolio</div>
+                <div class="hamb_Menu">
+                    <div class="hambMenu"></div>
+                </div>
+            </div>
+        </nav>
+        <div class="first_section">
+            <div class="galleryContainer">
+                <div class="filters">
+                    <span class="filter">Filtruj:</span>
+                    <div class="categories">
+                        <div class="filteredCategory btn">loga</div>
+                        <div class="filteredCategory btn">identyfikacje wizualne</div>
+                        <div class="filteredCategory btn">materiały promocyjne</div>
+                        <div class="filteredCategory btn">grafiki na social media</div>
+                        <div class="filteredCategory btn">księgi znaków</div>
+                        <div class="filteredCategory btn">ux/ui Design</div>
+                    </div>
+                    
+                </div>
+
+                    <div class="masonry-container">
+                    </div>
+                    
+
+            </div>
+        </div>
+
+        <footer class="stopka">
+            <div class="footerMenuContainer">
+                <div class="leftFooter">
+                    <div class="logoFooter">
+                        <img src="../assets/homePage/emef short.png" alt="">
+                        <span class="logoNameFooter">eMeF <br>Studio</span>
+                    </div> 
+                    <span class="footerAdress">Mariusz Franik</span>
+                    <span class="footerAdress">+48 111 222 333</span>
+                    <span class="footerAdress">info@emef.studio</span>
+                    
+                </div>
+                <div class="centerFooter">
+                    <div class="footerAbox">
+                        <a class="footerUp" href="#container" target="" rel="noopener noreferrer"><img src="../assets/homePage/icons8-arrow-up-50.png" alt="">Strona główna</a>
+                        <a class="footerUp" href="#services" target="" rel="noopener noreferrer"><img src="../assets/homePage/icons8-arrow-up-50.png" alt="">Usługi</a>
+                        <a class="footerUp" href="#portfolio" target="" rel="noopener noreferrer"><img src="../assets/homePage/icons8-arrow-up-50.png" alt="">Portfolio</a>
+                        <a class="footerUp" href="#contactMe" target="" rel="noopener noreferrer"><img src="../assets/homePage/icons8-arrow-up-50.png" alt="">Kontakt</a>
+                    </div> 
+                    
+                </div>
+                <div class="rightFooter">
+                   <div class="left">
+                    
+                   </div>
+                   <div class="right">
+                    <a href="./subpages/services.html">Usługi</a>
+                    <a href="./subpages/gallery.html">Portfolio</a>
+                    <a href="./subpages/caseStudies.html">Case studies</a>
+                    <a href="./subpages/blog.html">Blog</a>
+                    <a href="./subpages/about.html">O mnie</a>
+                   </div>
+                </div>
+            </div>
+            <div class="rightReservet">© Copyright 2024, Mariusz Franik. All Rights Reserved</div>
+           </footer>
+
+        <script src="../js/hambMenu.js"></script>
+        <script src="../js/gallery.js"></script>
 </body>
 </html>

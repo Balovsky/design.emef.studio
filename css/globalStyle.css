@@ -260,7 +260,7 @@ button::-moz-focus-inner {
     transition: all 3s ease, transform 0.3s ease;
 }
 .pageActive{
-    border-bottom: 2px solid ;
+    border-bottom: 2px solid;
 }
 .hambMenu.hambAnimation::before{
     content: '';

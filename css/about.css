@@ -157,9 +157,113 @@
 }
 .secondSection{
     width: 100%;
-    height: 2000px;
+    /* height: 2000px; */
     background: #F9F9F9;
+    padding: 50px 0px;
 }
+.faqContainer{
+    width: 80%;
+    /* height: 100%; */
+    /* background: red; */
+    margin: 0 auto;
+}
+.faqTitle{
+    /* padding-top: 50px; */
+    color: #4730D3;
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+.questContainer{
+    color: #4730D3;
+    width: 70%;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #4730D3;
+}
+.questTitle{
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.titleQuest{
+    margin-right: 10px;
+    /* background: red; */
+}
+.questDesc{
+    font-size: 22px;
+    /* height: 0px; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.47, 0, 0.745, 0.715);
+    
+}
+/* .questTitle img{
+    width: 32px;
+    height: 32px;
+} */
+ .questTitle{
+    /* background: pink; */
+ }
+.questContainer.active .questDesc {
+    max-height: 500px;
+}
+.faqArrow{
+    transition: all 0.5s cubic-bezier(0.47, 0, 0.745, 0.715);
+    transform: rotate(90deg);
+}
+.faqArrowActive{
+    transform: rotate(0deg);
+}
+.questNumber{
+    padding: 2px 5px;
+    margin-right: 10px;
+    background: #4730D3;
+    color: white;
+}
+.goToContactContainer{
+    display: flex;
+    align-items: center;
+    /* background: red; */
+    color: #4730D3;
+    font-size: 28px;
+    flex-direction: column;
+}
+.goToContactBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid #4730D3;
+    position: relative;
+    z-index: 1; /* Zmieniam z-index dla elementu rodzica */
+    color: #4730D3; /* Zakomentowana właściwość odkomentowana */
+    transition: all 0.3s ease;
+}
+
+.goToContactBtn:hover {
+    color: white;
+}
+
+.goToContactBtn::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* background: pink; */
+    z-index: -1; /* Upewnij się, że pseudo-element ma mniejszy z-index */
+    transition: width 0.3s ease; /* Użycie transition zamiast transform */
+}
+
+.goToContactBtn:hover::after {
+    width: 100%; /* Zmieniam width zamiast transform */
+    background: #838ef5;
+}
+
 @media (max-width: 1366px) {
     .right_side{
         width: 60%;
@@ -203,6 +307,11 @@
         margin-top: 50px;
         font-size: 30px;
         margin-bottom: 50px;
+    }
+    .questContainer{
+        /* color: #4730D3; */
+        width: 100%;
+        /* margin-bottom: 50px; */
     }
 
 }
@@ -259,5 +368,11 @@
         margin-top: 50px;
         font-size: 30px;
         margin-bottom: 50px;
+    }
+    .questTitle{
+        font-size: 20px;
+    }
+    .questDesc{
+        font-size: 18px;
     }
 }
