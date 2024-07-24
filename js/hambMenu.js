@@ -53,4 +53,17 @@ window.addEventListener("DOMContentLoaded", ()=>{
     // Inicjalne sprawdzenie pozycji przewijania przy załadowaniu strony
     toggleUpArrow();
 
+    const questContainers = document.querySelectorAll('.questContainer');
+
+    questContainers.forEach(container => {
+        const imageInContainer  = container.querySelector('.faqArrow')
+        const title = container.querySelector('.questTitle');
+        const desc = container.querySelector('.questDesc');
+
+        title.addEventListener('click', function() {
+            container.classList.toggle('active');
+            imageInContainer.classList.toggle('faqArrowActive')
+        });
+    });
+
 })
