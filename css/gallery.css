@@ -203,6 +203,39 @@ body::after {
     width: 100%;
     display: block;
   }
+  .fullScreenGallery{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    place-items: center;
+    overflow: hidden;
+    z-index: 999;
+  }
+  .fullGalActiv{
+    display: grid;
+  }
+  .fullScreenGallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .fullScreenGallery video{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .closeBtn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    /* width: 100px;
+    height: 100px; */
+    /* background: red; */
+  }
 
 
 
@@ -281,6 +314,11 @@ body::after {
         height: auto;
         width: 100%;
     }
+    .categories{
+        /* flex: 1; */
+        display: flex;
+        flex-direction: column;
+    }
 
     .masonry-container {
         column-count: 2; /* Dwie kolumny dla urządzeń o szerokości mniejszej niż 768px */
@@ -298,4 +336,5 @@ body::after {
     .btn{
   
       margin: 5px;
+}
 }
