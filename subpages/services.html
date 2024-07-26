@@ -1,11 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/services.css">
+    <title>usługi | eMeF</title>
 </head>
 <body>
-    <h1>services</h1>
+    <div class="upArrow show"></div>
+    <div id="container">
+        <div class="hamburgerPage">
+            <a class="menuBtn" href="../index.html">home</a>
+            <a class="menuBtn pageActive" href="./services.html">usługi</a>
+            <a class="menuBtn" href="./gallery.html">portfolio</a>
+            <a class="menuBtn" href="./caseStudies.html">case studies</a>
+            <a class="menuBtn" href="./blog.html">blog</a>
+            <a class="menuBtn " href="./about.html#faq">faq</a>
+            <a class="menuBtn " href="./about.html">o nas</a>
+            <a class="menuBtn" href="../index.html#contactMe">kontakt</a>
+            
+        </div>
+        <nav class="navigation">
+            <div class="leftNav">
+                <a class="backToHome" href="https://emef.studio/">
+                    <div class="logo_container">
+                        <img src="../assets/homePage/granat 2.png" alt="">
+                    </div>
+                    <span class="logoName">eMeF <br>Studio</span>
+                </a>
+            </div>
+            <div class="rightNav">
+                <div class="pageName menuBtn">usługi</div>
+                <div class="hamb_Menu">
+                    <div class="hambMenu"></div>
+                </div>
+            </div>
+        </nav>
+        <!-- <div class="first_section">
+            <div class="left_side">
+                <div class="categoryContainer">
+                    <div class="categoryOffert offertActive">
+                        Logotypy i Identyfikacja Wizualna
+                    </div>
+                    <div class="categoryOffert">
+                        Materiały Promocyjne
+                    </div>
+                    <div class="categoryOffert">
+                        Grafiki na Social Media
+                    </div>
+                    <div class="categoryOffert">
+                        Projektowanie Stron 
+Internetowych UX/UI
+                    </div>
+                    <div class="categoryOffert">
+                        Księga Znaku i Brand Book
+                    </div>
+                    <div class="categoryOffert">
+                        Projekty Specjalne
+                    </div>
+                    <div class="categoryOffert">
+                        Pakiety Usług
+                    </div>
+                </div>
+            </div>
+            <div class="right_side">
+                <div class="contentOffert">
+                    <div class="offertColumn">
+                        <div class="offertTitle">Projektowanie Logotypów</div>
+                        <div class="offertDesc">Tworzenie unikalnych logotypów
+                            Redesign istniejących logotypów
+                            Wersje logotypów dostosowane do różnych mediów (druk, digital)
+                            Cena: od 1000 zł</div>
+                    </div>
+                    <div class="offertColumn">
+                        <div class="offertTitle">Identyfikacja Wizualna</div>
+                        <div class="offertDesc">Opracowanie kolorystyki marki
+                            Wybór i projektowanie typografii
+                            Projektowanie wzorów i grafik firmowych
+                            Cena: od 3000 zł</div>
+                    </div>
+                    <div class="offertColumn">
+                        <div class="offertTitle">Projektowanie Logotypów</div>
+                        <div class="offertDesc">Tworzenie unikalnych logotypów
+                            Redesign istniejących logotypów
+                            Wersje logotypów dostosowane do różnych mediów (druk, digital)
+                            Cena: od 1000 zł</div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="first_section">
+            <div class="left_side">
+                <div class="categoryContainer">
+                    <div class="categoryOffert" data-category="logotypy">
+                        Logotypy i Identyfikacja Wizualna
+                    </div>
+                    <div class="categoryOffert" data-category="materialy">
+                        Materiały Promocyjne
+                    </div>
+                    <div class="categoryOffert" data-category="grafiki">
+                        Grafiki na Social Media
+                    </div>
+                    <div class="categoryOffert" data-category="uxui">
+                        Projektowanie Stron Internetowych UX/UI
+                    </div>
+                    <div class="categoryOffert" data-category="brandbook">
+                        Księga Znaku i Brand Book
+                    </div>
+                    <div class="categoryOffert" data-category="specjalne">
+                        Projekty Specjalne
+                    </div>
+                    <div class="categoryOffert" data-category="pakiety">
+                        Pakiety Usług
+                    </div>
+                </div>
+            </div>
+            <div class="right_side">
+                <div id="dynamicContent" class="contentOffert active">
+                    <img src="../assets/services/sdfsdfdsf.png" alt="">
+                    <!-- Dynamiczne treści będą generowane tutaj -->
+                </div>
+            </div>
+        </div>
+        <div class="secondSection">
+            asdasdasd
+        </div>
+
+        <footer class="stopka">
+            <div class="footerMenuContainer">
+                <div class="leftFooter">
+                    <div class="logoFooter">
+                        <img src="../assets/homePage/emef short.png" alt="">
+                        <span class="logoNameFooter">eMeF <br>Studio</span>
+                    </div> 
+                    <span class="footerAdress">Mariusz Franik</span>
+                    <span class="footerAdress">+48 111 222 333</span>
+                    <span class="footerAdress">info@emef.studio</span>
+                    
+                </div>
+                <div class="centerFooter">
+                    <div class="footerAbox">
+                        <a class="footerUp" href="#container" target="" rel="noopener noreferrer"><img src="../assets/homePage/icons8-arrow-up-50.png" alt="">Strona główna</a>
+                        <a class="footerUp" href="#services" target="" rel="noopener noreferrer"><img src="../assets/homePage/icons8-arrow-up-50.png" alt="">Usługi</a>
+                        <a class="footerUp" href="#portfolio" target="" rel="noopener noreferrer"><img src="../assets/homePage/icons8-arrow-up-50.png" alt="">Portfolio</a>
+                        <a class="footerUp" href="#contactMe" target="" rel="noopener noreferrer"><img src="../assets/homePage/icons8-arrow-up-50.png" alt="">Kontakt</a>
+                    </div> 
+                    
+                </div>
+                <div class="rightFooter">
+                   <div class="left">
+                    
+                   </div>
+                   <div class="right">
+                    <a href="./subpages/services.html">Usługi</a>
+                    <a href="./subpages/gallery.html">Portfolio</a>
+                    <a href="./subpages/caseStudies.html">Case studies</a>
+                    <a href="./subpages/blog.html">Blog</a>
+                    <a href="./subpages/about.html">O mnie</a>
+                   </div>
+                </div>
+            </div>
+            <div class="rightReservet">© Copyright 2024, Mariusz Franik. All Rights Reserved</div>
+           </footer>
+
+           <script src="../js/hambMenu.js"></script>
+           <script src="../js/services.js"></script>
 </body>
 </html>
