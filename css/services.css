@@ -145,6 +145,7 @@ body{
     color: #4730D3;
     background: #D9D9D9;
     transition: all 0.3s ease;
+    /* background: #CCF381; */
 }
 
 .contentOffert{
@@ -311,4 +312,176 @@ body{
     .categoryOffert{
         text-align: start;
     }
+}
+
+
+.process-section-wrapper {
+    cursor: grab;
+    overflow: hidden;
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+    user-select: none;         
+}
+
+.process-section {
+    display: flex;
+    overflow-x: auto; 
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    padding: 80px 0 40px 0;
+    background-color: #4730D3;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; 
+}
+
+.process-section::-webkit-scrollbar {
+    display: none; 
+}
+
+.process-container {
+    display: flex;
+    flex-wrap: nowrap; 
+    width: fit-content; 
+}
+
+.process-step {
+    display: inline-block;
+    width: 400px; 
+    /* margin-right: 20px;  */
+    padding: 0px 50px;
+    vertical-align: top;
+    white-space: normal;
+    /* text-align: center; */
+    box-sizing: border-box;
+    color: white;
+}
+.sectionTitle{
+    background: #4730D3;
+    padding: 50px 0px 0px 50px;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+}
+.scrollIcon{
+    background: #4730D3;
+    text-align: center;
+    /* font-size: 50px; */
+}
+.scrollIcon img{
+    transition: opacity 0.3s ease;
+    opacity: 0.5;
+}
+.firstArrow{
+    /* transform: rotate(135deg); */
+}
+.lastArrow{
+    /* transform: rotate(-45deg); */
+}
+.process-step.reverse {
+    /* text-align: center; */
+}
+.shaking{
+    transform: rotate(135deg);
+}
+.scrollIcon .shaking {
+    /* Klasa dla animacji drżenia */
+    animation: shake 0.5s ease infinite;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+.process-step.reverse .process-title,
+.process-step.reverse .process-desc,
+.process-step.reverse .process-icon {
+    display: block;
+    /* margin-bottom: 10px; */
+}
+
+.process-step.reverse .process-icon {
+    order: -1;
+    /* margin-bottom: 20px; */
+}
+
+.process-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.process-desc {
+    font-size: 20px;
+    color: #D9D9D9;
+    /* margin-bottom: 20px; */
+}
+
+.process-icon {
+    /* margin-top: 50px; */
+    width: 100%;
+    text-align: center;
+    font-size: 44px;
+    position: relative;
+    z-index: 78;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0px 0px 25px rgba(0, 0, 0, 0.2);
+    /* background: red; */
+}
+.process-icon:nth-child(odd) {
+    margin-top: 50px;
+}
+.even {
+    margin-bottom: 50px;
+}
+.process-title{
+    /* padding-top: 50px; */
+}
+
+.process-icon::after{
+    content: '';
+    width: 110px;
+    height: 110px;
+    /* background: pink; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    
+}
+.one::after{
+    background: #5C3DAC ;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 6px 20px rgba(0, 0, 0, 0.19);
+}
+.two::after{
+    background: #7355C4;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 6px 20px rgba(0, 0, 0, 0.19);
+}
+.three::after{
+    background: #8A6FC4 ;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 6px 20px rgba(0, 0, 0, 0.19);
+}
+.four::after{
+    background: #A187C5 ;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 6px 20px rgba(0, 0, 0, 0.19);
+}
+.five::after{
+    background: #B79CC6 ;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 6px 20px rgba(0, 0, 0, 0.19);
+}
+.six::after{
+    background: #C8B6B1 ;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 6px 20px rgba(0, 0, 0, 0.19);
+}
+.seven::after{
+    background: #D9D6A0 ;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 6px 20px rgba(0, 0, 0, 0.19);
+}
+.eight::after{
+    background: #E6F1B3 ;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 6px 20px rgba(0, 0, 0, 0.19);
 }
