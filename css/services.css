@@ -384,16 +384,28 @@ body{
 .shaking{
     transform: rotate(135deg);
 }
-.scrollIcon .shaking {
+.scrollIcon .shakingL {
     /* Klasa dla animacji drżenia */
     animation: shake 0.5s ease infinite;
 }
+.scrollIcon .shakingP {
+    /* Klasa dla animacji drżenia */
+    animation: test 0.5s ease infinite;
+}
+
 
 @keyframes shake {
     0% { transform: translateX(0); }
     25% { transform: translateX(-3px); }
     50% { transform: translateX(3px); }
     75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+@keyframes test {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(3px); }
+    50% { transform: translateX(-3px); }
+    75% { transform: translateX(3px); }
     100% { transform: translateX(0); }
 }
 .process-step.reverse .process-title,

@@ -35,19 +35,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const firstArrow = document.querySelector('.scrollIcon .firstArrow');
     const lastArrow = document.querySelector('.scrollIcon .lastArrow');
 
-    sectionWrapper.addEventListener('mouseover', () => {
+    function handleMouseOver() {
         scrollIconImgs.forEach(img => {
             img.style.opacity = 1;
         });
-        firstArrow.classList.add('shaking');
-        lastArrow.classList.add('shaking');
-    });
+        firstArrow.classList.add('shakingL');
+        lastArrow.classList.add('shakingP');
+    }
 
-    sectionWrapper.addEventListener('mouseout', () => {
+    function handleMouseOut() {
         scrollIconImgs.forEach(img => {
             img.style.opacity = 0.5;
         });
-        firstArrow.classList.remove('shaking');
-        lastArrow.classList.remove('shaking');
-    });
+        firstArrow.classList.remove('shakingL');
+        lastArrow.classList.remove('shakingP');
+    }
+
+    sectionWrapper.addEventListener('mouseover', handleMouseOver);
+    sectionWrapper.addEventListener('mouseout', handleMouseOut);
+    sectionWrapper.addEventListener('touchstart', handleMouseOver);
+    sectionWrapper.addEventListener('touchend', handleMouseOut);
 });
