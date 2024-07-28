@@ -192,5 +192,32 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleUpArrow();
 
 
+    const form = document.getElementById('contactForm');
+    const popup = document.getElementById('popup');
+    const closeBtn = document.querySelector('.close-btn');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Zatrzymuje domyślną akcję formularza
+
+        // Symulujemy wysłanie formularza (np. wywołanie AJAX lub fetch)
+        setTimeout(() => {
+            popup.style.display = 'flex'; // Wyświetla popup
+        }, 500); // Opóźnienie na symulację wysyłania
+
+        // Resetowanie formularza (opcjonalnie)
+        form.reset();
+    });
+
+    closeBtn.addEventListener('click', function() {
+        popup.style.display = 'none'; // Ukrywa popup po kliknięciu na przycisk zamknięcia
+    });
+
+    // Ukrywanie popupu klikając poza jego obszarem
+    window.addEventListener('click', function(event) {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+
 });
 
