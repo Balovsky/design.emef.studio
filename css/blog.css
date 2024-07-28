@@ -1,0 +1,12 @@
+.first_section{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first_section img{
+    width: 100px;
+    height: 100px;
+}
