@@ -196,15 +196,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const popup = document.getElementById('popup');
     const closeBtn = document.querySelector('.close-btn');
 
-    form.addEventListener('submit', function(event) {
+    form.addEventListener('submit', async function(event) {
         event.preventDefault(); // Zatrzymuje domyślną akcję formularza
 
-        // Symulujemy wysłanie formularza (np. wywołanie AJAX lub fetch)
-        setTimeout(() => {
-            popup.style.display = 'flex'; // Wyświetla popup
-        }, 500); // Opóźnienie na symulację wysyłania
+        // Przygotowanie danych formularza
+        const formData = new FormData(form);
 
-        // Resetowanie formularza (opcjonalnie)
+        // Wysyłanie danych formularza do Netlify
+        try {
+            await fetch(form.action, {
+                method: 'POST',
+                body: formData
+            });
+
+            // Wyświetlanie popupu po pomyślnym wysłaniu formularza
+            popup.style.display = 'flex';
+        } catch (error) {
+            console.error('Błąd podczas wysyłania formularza:', error);
+        }
+
+        // Resetowanie formularza
         form.reset();
     });
 
