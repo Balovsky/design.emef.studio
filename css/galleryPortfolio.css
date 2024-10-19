@@ -1,0 +1,423 @@
+body{
+  background: #F9F9F9;
+}
+.navigation, .leftNav, .rightNav{
+  background: transparent !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Zapewnia, że pseudo-elementy nie będą kolidować z interakcjami użytkownika */
+  z-index: -1; /* Ustawia pseudo-elementy za innymi elementami na stronie */
+}
+
+body::before {
+  background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.1), transparent 50%),
+              radial-gradient(circle at top right, rgba(0, 0, 0, 0.1), transparent 50%),
+              radial-gradient(circle at bottom left, rgba(0, 0, 0, 0.1), transparent 50%),
+              radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.1), transparent 50%);
+  top: 0;
+  left: 0;
+}
+
+body::after {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.1), transparent),
+              linear-gradient(to bottom, rgba(0, 0, 0, 0.1), transparent),
+              linear-gradient(to left, rgba(0, 0, 0, 0.1), transparent),
+              linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent);
+  top: 0;
+  left: 0;
+}
+.hamb_Menu {
+  padding: 10px 5px 20px 5px;
+  /* background: red; */
+  cursor: pointer;
+}
+.hambMenu::before{
+  content: '';
+  width: 60%;
+  height: 100%;
+  position: absolute;   
+  top: 13px;
+  right: 0px;
+  background: #4730D3;
+  border-radius: 25px;
+  transition: all 3s ease, transform 0.3s ease;
+}
+.hambMenu.hambAnimation::before{
+  content: '';
+  width: 60%;
+  height: 100%;
+  position: absolute;   
+  top: 13px;
+  right: 0px;
+  background: #4730D3;
+  border-radius: 25px;
+  transform-origin: bottom right;
+  transform: rotate(45deg);
+}
+.hamburgerPage a::after{
+
+  background: #CCF381;
+
+}
+.hamburgerPage a{
+  margin: 5px;
+  padding: 5px 10px;
+  color: #CCF381;
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.hamburgerPage a:hover::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #CCF381;
+  position: absolute;
+  color: #4730D3;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.hamburgerPage{
+  width: 100vw;
+  margin-top: 150px;
+  height: calc( 100vh - 150px );
+  background: #4730D3;;
+  /* z-index: ; */
+  position: fixed;
+  /* visibility: hidden; */
+  transform: translate(100%, -100%);
+  z-index: 999;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 4em 5em;
+  
+} 
+.hamburgerPage a:hover{
+
+  color: #4730D3;
+
+}.menuBtn{
+  color: #CCF381;
+}
+.pageName {
+  color: #4730D3;
+}
+.logoName{
+  color: #4730D3;
+}
+.galleryContainer{
+  padding: 60px 0px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+.nGY2Icon-ok:before {
+  content: '\e808';
+  position: absolute;
+  top: 9px;
+  left: 0px;
+
+}
+
+.nGY2Icon-circle-empty:before {
+  position: absolute;
+  top: 9px;
+  left: 0px;
+
+}
+.nGY2Navigationbar .nGY2NavigationbarItem{
+  display: inline-block;
+  background: transparent !important;
+  /* color: black; */
+  color: white !important;
+  font-size: 18px;
+  margin: 20px;
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+  /* margin: 20px; */
+  /* margin-bottom: 20px; */
+  /* border: 2px solid yellow; */
+  font-weight: 600;
+  overflow: visible;
+  border-radius: 0px;
+}
+
+.nGY2Navigationbar .nGY2NavigationbarItem::before{
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background: #4730D3;
+  z-index: -1;
+  transition: transform 0.15s ease-out 0s;
+  padding: 3px;
+
+}
+/* .nGY2Navigationbar .nGY2NavigationbarItem::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #CCF381;
+  transition: transform 0.15s ease-out 0s;
+  z-index: -1;
+  padding: 3px;
+} */
+
+/* .nGY2Navigationbar .nGY2NavigationbarItem:hover::before{
+  transform: translate(10px, -7px);
+  transition: all 0.3s ease;
+}
+
+
+.nGY2Navigationbar .nGY2NavigationbarItem:hover::after{
+  transform: translate(-5px, 5px);
+  z-index: -1;
+  transition: all 0.3s ease;
+} */
+
+.nGY2Icon-ok{
+  border-radius: 50%;
+  background: white;
+  color: white !important;
+  transition: all 0.3s ease;
+  padding-right: 5px;
+}
+.nGY2Icon-circle-empty{
+
+  color: white !important;
+  transition: all 0.3s ease;
+  padding-right: 5px;
+}
+
+
+@media (max-width: 1366px) {
+  .right_side{
+      width: 60%;
+      /* height: calc( 100% - 150px); */
+      background: #4730D3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* border: 2px solid red; */
+  }
+  .left_side{
+      width: 40%;
+      /* height: calc( 100% - 150px); */
+      background: #CCF381;
+      flex: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+  }
+  .leftNav{
+      width: 40%;
+      background: #ccf381;
+  }
+  .imageContainer{
+      width: 100%;
+      height: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px;
+      /* background: red; */
+  }
+  .aboutDesc{
+      width: 100%;
+      margin: 0px 40px;
+      /* margin: 0px; */
+      font-size: 20px;
+  }
+  .socialsLinks{
+      width: 80px;
+      margin-top: 50px;
+      font-size: 30px;
+      margin-bottom: 50px;
+  }
+  .questContainer{
+      /* color: #4730D3; */
+      width: 100%;
+      /* margin-bottom: 50px; */
+  }
+
+}
+
+@media (max-width: 768px) {
+  .imageContainer{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+  }
+  .imageContainer img {
+      width: 40%;
+      height: 20%;
+      object-fit: cover;
+  }
+  .leftNav{
+      width: 70%;
+      background: #ccf381;
+  }
+  .first_section{
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+  }
+  .categories{
+      /* flex: 1; */
+      display: flex;
+      flex-direction: column;
+  }
+
+  .masonry-container {
+      column-count: 2; /* Dwie kolumny dla urządzeń o szerokości mniejszej niż 768px */
+    }
+    .filterButtonsContainer{
+      width: 80%;
+      margin: 20px auto 20px auto;
+      /* background: yellow; */
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color: white;
+      font-size: 16px;
+  }
+  .btn{
+    margin: 5px;
+}
+
+.nGY2NavigationbarItem {
+  margin: 5px !important;
+}
+}
+
+
+.imagesContainer{
+  width: 100%;
+  height: 300px;
+  /* background: blue; */
+  margin-bottom: 50px;
+}
+.filters{
+  display: flex;
+  align-items: center;
+  color: #4730D3;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+.filter{
+  margin-right: 20px;
+}
+.filteredCategory{
+  margin-right: 20px;
+  padding: 5px 10px;
+  background: #4730D3;
+  color: white;
+  cursor: pointer;
+}
+.categories{
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.imagesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.imagesContainer img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.masonry-container {
+  margin: 0 auto;
+  width: 100%;
+  column-count: 4; /* Liczba kolumn */
+  column-gap: 10px; /* Przerwa między kolumnami */
+}
+
+.masonry-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px; /* Odstęp między zdjęciami */
+  break-inside: avoid;
+  transition: all 0.32s ease;
+}
+
+.masonry-item img {
+  width: 100%;
+  display: block;
+}
+.masonry-item video {
+  width: 100%;
+  display: block;
+}
+.fullScreenGallery{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  place-items: center;
+  overflow: hidden;
+  z-index: 999;
+}
+.fullGalActiv{
+  display: grid;
+}
+.fullScreenGallery img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.fullScreenGallery video{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.closeBtn{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  /* width: 100px;
+  height: 100px; */
+  /* background: red; */
+}
+
+
+
+
+
